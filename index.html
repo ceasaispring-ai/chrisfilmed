@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kyle Christopher — Atlanta Cinematographer & Visual Creative | @chrisfilmed</title>
+<meta name="description" content="Kyle Christopher (@chrisfilmed) is an Atlanta-based cinematographer, videographer and photographer specializing in sports cinematics, highlight reels, event coverage and lifestyle visuals." />
+<meta name="theme-color" content="#0a0a0b" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Kyle Christopher — Atlanta Cinematographer & Visual Creative" />
+<meta property="og:description" content="Sports cinematics, highlight reels, event coverage & lifestyle visuals out of metro Atlanta. @chrisfilmed" />
+<meta property="og:image" content="https://cdn.myportfolio.com/89ceaadb-89e2-443f-9de5-5944ac2e36ac/88a1ccde-1e24-4b58-ac57-da638c39f86c_rw_1200.jpg?h=7b2eb5f79e091869c874c153e0e1ff4e" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --bg-soft:#111114;
+    --bg-card:#141417;
+    --line:rgba(255,255,255,.08);
+    --txt:#f2f2f0;
+    --muted:#9a9a9f;
+    --gold:#d8a64a;
+    --gold-soft:#e7c585;
+    --max:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--txt);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--gold);color:#000}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}
+
+  h1,h2,h3,.display{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.5px;line-height:.95;text-transform:uppercase}
+
+  /* film grain overlay */
+  .grain{
+    position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* NAV */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    transition:background .4s ease,backdrop-filter .4s ease,border-color .4s ease;
+    border-bottom:1px solid transparent;
+  }
+  header.scrolled{background:rgba(10,10,11,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{font-family:'Anton',sans-serif;font-size:1.35rem;letter-spacing:1px}
+  .brand span{color:var(--gold)}
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);transition:color .25s}
+  .nav-links a:hover{color:var(--txt)}
+  .nav-cta{border:1px solid var(--gold);color:var(--gold);padding:9px 18px;border-radius:2px;transition:all .25s}
+  .nav-cta:hover{background:var(--gold);color:#000}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:0;padding:6px}
+  .burger span{width:26px;height:2px;background:var(--txt);transition:.3s}
+
+  /* HERO */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(1.08);animation:slowzoom 18s ease-out forwards}
+  @keyframes slowzoom{to{transform:scale(1)}}
+  .hero-bg::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(10,10,11,.55) 0%,rgba(10,10,11,.25) 35%,rgba(10,10,11,.78) 78%,var(--bg) 100%);}
+  .hero-inner{position:relative;z-index:2;padding-bottom:70px;width:100%}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold-soft);margin-bottom:22px}
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+  .hero h1{font-size:clamp(3.2rem,12vw,8.5rem);text-shadow:0 4px 40px rgba(0,0,0,.5)}
+  .hero h1 .l2{color:var(--gold)}
+  .hero-sub{max-width:560px;color:#dcdcde;font-size:clamp(1rem,2.4vw,1.18rem);margin:22px 0 34px;font-weight:300}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:3px;font-size:.82rem;letter-spacing:1.6px;text-transform:uppercase;font-weight:600;transition:all .28s;cursor:pointer;border:1px solid transparent}
+  .btn-primary{background:var(--gold);color:#000}
+  .btn-primary:hover{background:var(--gold-soft);transform:translateY(-2px)}
+  .btn-ghost{border-color:rgba(255,255,255,.3);color:var(--txt)}
+  .btn-ghost:hover{border-color:var(--txt);background:rgba(255,255,255,.06)}
+  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;font-size:.68rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scroll-cue .dot{width:1px;height:42px;background:linear-gradient(var(--gold),transparent);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+  /* MARQUEE */
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-soft);overflow:hidden;white-space:nowrap;padding:18px 0}
+  .marquee-track{display:inline-flex;gap:46px;animation:scroll 28s linear infinite}
+  .marquee span{font-family:'Anton',sans-serif;font-size:1.05rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+  .marquee span b{color:var(--gold)}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* SECTIONS */
+  section{padding:110px 0;position:relative}
+  .sec-head{margin-bottom:54px;max-width:720px}
+  .sec-tag{font-size:.76rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  .sec-tag::before{content:"";width:28px;height:1px;background:var(--gold)}
+  .sec-head h2{font-size:clamp(2.2rem,6vw,4rem)}
+  .sec-head p{color:var(--muted);margin-top:18px;font-size:1.05rem;font-weight:300}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .about-portrait{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/5}
+  .about-portrait img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+  .about-portrait:hover img{transform:scale(1.04)}
+  .about-portrait::after{content:"";position:absolute;inset:0;border:1px solid var(--line)}
+  .about-text p{color:#c9c9cc;font-weight:300;margin-bottom:18px;font-size:1.06rem}
+  .about-text .lead{font-size:1.25rem;color:var(--txt);font-weight:400}
+  .stats{display:flex;gap:40px;margin-top:36px;flex-wrap:wrap}
+  .stat .num{font-family:'Anton',sans-serif;font-size:2.6rem;color:var(--gold);line-height:1}
+  .stat .lbl{font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+  /* SERVICES */
+  .services{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .svc{background:var(--bg-card);border:1px solid var(--line);border-radius:4px;padding:38px 34px;transition:all .3s;position:relative;overflow:hidden}
+  .svc::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+  .svc:hover{transform:translateY(-5px);border-color:rgba(216,166,74,.4)}
+  .svc:hover::before{transform:scaleX(1)}
+  .svc .ico{font-family:'Anton',sans-serif;font-size:1.4rem;color:var(--gold);width:54px;height:54px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:50%;margin-bottom:24px}
+  .svc h3{font-size:1.45rem;margin-bottom:12px}
+  .svc p{color:var(--muted);font-weight:300;font-size:.98rem}
+
+  /* WORK / REELS */
+  .reel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .reel{position:relative;border-radius:4px;overflow:hidden;background:#000;border:1px solid var(--line);aspect-ratio:16/9}
+  .reel iframe{width:100%;height:100%;border:0;display:block}
+  .reel-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;background:radial-gradient(circle at center,#1c1c20,#0c0c0e);transition:background .3s}
+  .reel-ph:hover{background:radial-gradient(circle at center,#26262b,#0c0c0e)}
+  .reel-ph .play{width:74px;height:74px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:.3s}
+  .reel-ph:hover .play{background:var(--gold);transform:scale(1.05)}
+  .reel-ph .play svg{margin-left:4px}
+  .reel-ph:hover .play svg path{fill:#000}
+  .reel-ph .lbl{font-size:.78rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+  .reel-ph .ttl{font-family:'Anton',sans-serif;font-size:1.3rem;margin-top:4px}
+  .work-more{text-align:center;margin-top:46px}
+
+  /* GALLERY */
+  .gallery{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .filters{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+  .filter{background:none;border:1px solid var(--line);color:var(--muted);padding:9px 20px;border-radius:40px;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.25s;font-family:inherit}
+  .filter:hover{color:var(--txt);border-color:var(--muted)}
+  .filter.active{background:var(--gold);color:#000;border-color:var(--gold)}
+  .grid{columns:3;column-gap:18px}
+  .gitem{break-inside:avoid;margin-bottom:18px;position:relative;overflow:hidden;border-radius:4px;cursor:pointer;border:1px solid var(--line)}
+  .gitem img{width:100%;transition:transform .6s ease;filter:grayscale(.15)}
+  .gitem:hover img{transform:scale(1.06);filter:grayscale(0)}
+  .gitem::after{content:attr(data-cap);position:absolute;left:0;right:0;bottom:0;padding:30px 16px 14px;font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.8));opacity:0;transition:.3s}
+  .gitem:hover::after{opacity:1}
+
+  /* CLIENTS */
+  .credits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .credit{background:var(--bg);padding:34px 20px;text-align:center;transition:background .3s}
+  .credit:hover{background:var(--bg-card)}
+  .credit .c-name{font-family:'Anton',sans-serif;font-size:1.15rem;letter-spacing:1px}
+  .credit .c-type{font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:6px}
+  .credits-note{color:var(--muted);font-size:.86rem;margin-top:22px;font-weight:300;font-style:italic}
+
+  /* CONTACT */
+  .contact{text-align:center}
+  .contact h2{font-size:clamp(2.6rem,9vw,6rem);margin-bottom:24px}
+  .contact h2 .gold{color:var(--gold)}
+  .contact p{color:var(--muted);max-width:540px;margin:0 auto 40px;font-weight:300;font-size:1.1rem}
+  .contact-actions{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:50px}
+  .contact-links{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:40px;max-width:680px;margin:0 auto}
+  .clink .k{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .clink .v{font-size:1.05rem;color:var(--txt);transition:color .25s}
+  .clink:hover .v{color:var(--gold)}
+
+  footer{border-top:1px solid var(--line);padding:40px 0;text-align:center}
+  footer .f-brand{font-family:'Anton',sans-serif;font-size:1.6rem;letter-spacing:1px;margin-bottom:10px}
+  footer .f-brand span{color:var(--gold)}
+  footer p{color:var(--muted);font-size:.82rem}
+
+  /* LIGHTBOX */
+  .lb{position:fixed;inset:0;z-index:2000;background:rgba(6,6,7,.96);display:none;align-items:center;justify-content:center;padding:30px}
+  .lb.open{display:flex}
+  .lb img{max-width:92vw;max-height:88vh;border-radius:4px}
+  .lb-close{position:absolute;top:24px;right:30px;font-size:2.2rem;color:#fff;cursor:pointer;line-height:1;background:none;border:0}
+  .lb-nav{position:absolute;top:50%;transform:translateY(-50%);font-size:2.4rem;color:#fff;cursor:pointer;background:none;border:0;padding:20px;opacity:.7;transition:.2s}
+  .lb-nav:hover{opacity:1}
+  .lb-prev{left:10px}.lb-next{right:10px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .nav-links{position:fixed;top:72px;right:0;bottom:0;width:78%;max-width:320px;flex-direction:column;align-items:flex-start;gap:24px;background:var(--bg-soft);border-left:1px solid var(--line);padding:40px 32px;transform:translateX(110%);transition:transform .35s ease}
+    .nav-links.open{transform:none}
+    .burger{display:flex}
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    .about-portrait{max-width:420px}
+    .svc-grid,.reel-grid{grid-template-columns:1fr}
+    .grid{columns:2}
+    .credits-grid{grid-template-columns:repeat(2,1fr)}
+    section{padding:80px 0}
+  }
+  @media(max-width:520px){
+    .grid{columns:1}
+    .stats{gap:28px}
+    .contact-links{gap:24px}
+  }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<header id="hdr">
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="brand">CHRIS<span>FILMED</span></a>
+      <div class="nav-links" id="navlinks">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="nav-cta">Book Now</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <img src="https://cdn.myportfolio.com/89ceaadb-89e2-443f-9de5-5944ac2e36ac/88a1ccde-1e24-4b58-ac57-da638c39f86c_rw_1200.jpg?h=7b2eb5f79e091869c874c153e0e1ff4e" alt="Basketball player rising for a shot, captured mid-game" />
+  </div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <span class="eyebrow">Metro Atlanta · Creative</span>
+      <h1>Kyle<br><span class="l2">Christopher</span></h1>
+      <p class="hero-sub">Cinematographer, videographer &amp; photographer turning game-day moments into cinematic stories. Sports cinematics, highlight reels and lifestyle visuals — shot and cut in Atlanta.</p>
+      <div class="hero-cta">
+        <a href="#work" class="btn btn-primary">View the Work</a>
+        <a href="#contact" class="btn btn-ghost">Let's Create</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="dot"></span></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="mq">
+    <span>Highlight Reels <b>★</b></span><span>Sports Cinematics <b>★</b></span><span>Game-Day Coverage <b>★</b></span><span>Photography <b>★</b></span><span>Edits &amp; Post <b>★</b></span><span>Lifestyle &amp; Events <b>★</b></span>
+    <span>Highlight Reels <b>★</b></span><span>Sports Cinematics <b>★</b></span><span>Game-Day Coverage <b>★</b></span><span>Photography <b>★</b></span><span>Edits &amp; Post <b>★</b></span><span>Lifestyle &amp; Events <b>★</b></span>
+  </div>
+</div>
+
+<!-- WORK / REELS -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Selected Reels</div>
+      <h2>Motion that hits different</h2>
+      <p>A selection of cinematic edits straight from the portfolio — on the court, on the field, and beyond. Tap any reel to play.</p>
+    </div>
+    <div class="reel-grid">
+      <div class="reel reveal" data-ccv="4gmjhoMcQAr"><div class="reel-ph" onclick="loadReel(this)"><div class="play"><svg width="22" height="24" viewBox="0 0 22 24"><path d="M0 0l22 12L0 24z" fill="#d8a64a"/></svg></div><div class="ttl">Cinematic 01</div><div class="lbl">Sports Edit</div></div></div>
+      <div class="reel reveal" data-ccv="JEjcNVry_Wn"><div class="reel-ph" onclick="loadReel(this)"><div class="play"><svg width="22" height="24" viewBox="0 0 22 24"><path d="M0 0l22 12L0 24z" fill="#d8a64a"/></svg></div><div class="ttl">Cinematic 02</div><div class="lbl">Highlight Reel</div></div></div>
+      <div class="reel reveal" data-ccv="2YbrRBuqNKv"><div class="reel-ph" onclick="loadReel(this)"><div class="play"><svg width="22" height="24" viewBox="0 0 22 24"><path d="M0 0l22 12L0 24z" fill="#d8a64a"/></svg></div><div class="ttl">Cinematic 03</div><div class="lbl">Visual Story</div></div></div>
+      <div class="reel reveal" data-ccv="3v-WS64nzGI"><div class="reel-ph" onclick="loadReel(this)"><div class="play"><svg width="22" height="24" viewBox="0 0 22 24"><path d="M0 0l22 12L0 24z" fill="#d8a64a"/></svg></div><div class="ttl">Cinematic 04</div><div class="lbl">Feature Edit</div></div></div>
+    </div>
+    <div class="work-more">
+      <a href="https://chrisfilmed.myportfolio.com/videography" target="_blank" rel="noopener" class="btn btn-ghost">Full Videography Portfolio ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-portrait reveal">
+        <img src="https://cdn.myportfolio.com/89ceaadb-89e2-443f-9de5-5944ac2e36ac/ae2e65fd-8004-43ae-b236-03b6121d405d_rw_1200.jpg?h=fdfd88d9937033ac47a38e85b7f88b79" alt="Portrait of Kyle Christopher" />
+      </div>
+      <div class="about-text reveal">
+        <div class="sec-tag">The Creative</div>
+        <p class="lead">I'm Kyle Christopher — a visual creative based in metro Atlanta, telling stories through a lens.</p>
+        <p>Known across the platforms as <b>@chrisfilmed</b> and <b>CHRISUNCUT</b>, I shoot and edit cinematic content with a heavy focus on sports — capturing the intensity of game day, the grind of practice, and the moments athletes want to remember forever.</p>
+        <p>From basketball highlight reels and field-side coverage to lifestyle, events and automotive visuals, my work lives at the intersection of photography and motion. Every frame is built to feel like a film, not just footage.</p>
+        <div class="stats">
+          <div class="stat"><div class="num">Both</div><div class="lbl">Photo &amp; Video</div></div>
+          <div class="stat"><div class="num">ATL</div><div class="lbl">Based · Travels</div></div>
+          <div class="stat"><div class="num">Sports</div><div class="lbl">Specialty</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">What I Offer</div>
+      <h2>Services</h2>
+      <p>Full-service visual production — from the first whistle to the final cut.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><div class="ico">01</div><h3>Highlight Reels</h3><p>Recruiting tapes, mixtapes and social-ready highlight edits that put athletes in the best light — synced, color-graded and built to get shared.</p></div>
+      <div class="svc reveal"><div class="ico">02</div><h3>Sports &amp; Game-Day Cinematics</h3><p>Cinematic coverage of games, practices and tournaments. Field-side and court-side angles cut into stories that capture the energy of the moment.</p></div>
+      <div class="svc reveal"><div class="ico">03</div><h3>Photography</h3><p>Sports action, lifestyle, events and automotive photography. Bold, moody, editorial frames for athletes, brands and creators.</p></div>
+      <div class="svc reveal"><div class="ico">04</div><h3>Editing &amp; Post</h3><p>Professional editing, color and sound design. Already have footage? I'll shape it into a polished, scroll-stopping final cut.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Stills</div>
+      <h2>Photo Gallery</h2>
+      <p>A look at the photography — sports, lifestyle and automotive frames pulled from recent work.</p>
+    </div>
+    <div class="filters reveal">
+      <button class="filter active" data-f="all">All</button>
+      <button class="filter" data-f="sports">Sports</button>
+      <button class="filter" data-f="lifestyle">Lifestyle</button>
+      <button class="filter" data-f="auto">Automotive</button>
+    </div>
+    <div class="grid" id="grid">
+      <div class="gitem reveal" data-cat="sports" data-cap="Game Day · Basketball"><img src="https://cdn.myportfolio.com/89ceaadb-89e2-443f-9de5-5944ac2e36ac/88a1ccde-1e24-4b58-ac57-da638c39f86c_rw_1200.jpg?h=7b2eb5f79e091869c874c153e0e1ff4e" alt="Basketball player rising for a shot mid-game" loading="lazy"></div>
+      <div class="gitem reveal" data-cat="sports" data-cap="Friday Nights · Football"><img src="https://cdn.myportfolio.com/89ceaadb-89e2-443f-9de5-5944ac2e36ac/f2ba5478-dfce-49e5-bcf1-34012ec064d7_rw_1200.jpg?h=f5c358091a8bac1695d7ab66cd7c5cf1" alt="Two football players under the lights" loading="lazy"></div>
+      <div class="gitem reveal" data-cat="sports" data-cap="Golden Hour · The Field"><img src="https://cdn.myportfolio.com/89ceaadb-89e2-443f-9de5-5944ac2e36ac/a92885e2-13b1-4048-803c-7e77215cca6a_rw_1200.jpg?h=d1dda2c1725726bc5b74ed447525cafb" alt="Figure walking onto an empty stadium field at golden hour" loading="lazy"></div>
+      <div class="gitem reveal" data-cat="lifestyle" data-cap="Lifestyle · Portrait"><img src="https://cdn.myportfolio.com/89ceaadb-89e2-443f-9de5-5944ac2e36ac/ae2e65fd-8004-43ae-b236-03b6121d405d_rw_1200.jpg?h=fdfd88d9937033ac47a38e85b7f88b79" alt="Stylish low-light portrait in a car interior" loading="lazy"></div>
+      <div class="gitem reveal" data-cat="auto" data-cap="Automotive · Lifestyle"><img src="https://cdn.myportfolio.com/89ceaadb-89e2-443f-9de5-5944ac2e36ac/6c468151-ee60-4604-9a32-885d54a5aae6_rw_1200.jpg?h=58555fef607cafa3b1bfdba005d5d5dc" alt="Subject stepping into a black sports car" loading="lazy"></div>
+      <div class="gitem reveal" data-cat="lifestyle" data-cap="Street · Editorial"><img src="https://cdn.myportfolio.com/89ceaadb-89e2-443f-9de5-5944ac2e36ac/134e6ce8-c014-4927-b986-53e76e8575d0_rwc_0x536x1439x1080x1439.jpg?h=a44a4c851e53538cf757b5fd794a571e" alt="Street style portrait on a stairwell" loading="lazy"></div>
+    </div>
+    <div class="work-more">
+      <a href="https://chrisfilmed.myportfolio.com/photography" target="_blank" rel="noopener" class="btn btn-ghost">Full Photography Portfolio ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS / CREDITS -->
+<section id="credits">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Trusted By</div>
+      <h2>Clients &amp; Credits</h2>
+      <p>Working with athletes, teams and creators across the Atlanta sports scene.</p>
+    </div>
+    <div class="credits-grid reveal">
+      <div class="credit"><div class="c-name">Atlanta Celtics</div><div class="c-type">AAU · Class of 2027</div></div>
+      <div class="credit"><div class="c-name">Prep &amp; HS Athletes</div><div class="c-type">Highlight Reels</div></div>
+      <div class="credit"><div class="c-name">Travel Teams</div><div class="c-type">Tournament Coverage</div></div>
+      <div class="credit"><div class="c-name">Creators &amp; Brands</div><div class="c-type">Lifestyle Content</div></div>
+    </div>
+    <p class="credits-note reveal">Want your name here? Recent &amp; current collaborators — full client list available on request.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="sec-tag" style="justify-content:center">Let's Work</div>
+      <h2>Book a <span class="gold">Shoot</span></h2>
+      <p>Have a game, an event or a vision in mind? Let's turn it into something cinematic. Reach out and let's talk through your project.</p>
+      <div class="contact-actions">
+        <a href="https://instagram.com/chrisfilmed" target="_blank" rel="noopener" class="btn btn-primary">DM on Instagram</a>
+        <a href="mailto:hello@chrisfilmed.com?subject=Booking%20Inquiry%20%E2%80%94%20chrisfilmed" class="btn btn-ghost" id="emailBtn">Email Me</a>
+      </div>
+      <div class="contact-links">
+        <a class="clink" href="https://instagram.com/chrisfilmed" target="_blank" rel="noopener"><div class="k">Instagram</div><div class="v">@chrisfilmed</div></a>
+        <a class="clink" href="https://chrisfilmed.myportfolio.com" target="_blank" rel="noopener"><div class="k">Portfolio</div><div class="v">chrisfilmed.myportfolio.com</div></a>
+        <div class="clink"><div class="k">Based In</div><div class="v">Metro Atlanta, GA</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand">CHRIS<span>FILMED</span></div>
+    <p>© <span id="yr"></span> Kyle Christopher · @chrisfilmed · CHRISUNCUT — Metro Atlanta Creative</p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb">
+  <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+  <img id="lbImg" src="" alt="" />
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next">&#8250;</button>
+</div>
+
+<script>
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // nav scroll state
+  const hdr = document.getElementById('hdr');
+  addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 40));
+
+  // mobile menu
+  const burger = document.getElementById('burger');
+  const navlinks = document.getElementById('navlinks');
+  burger.addEventListener('click', () => navlinks.classList.toggle('open'));
+  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // lazy-load reels (Adobe CCV embeds) on click
+  function loadReel(ph){
+    const reel = ph.parentElement;
+    const id = reel.dataset.ccv;
+    const ifr = document.createElement('iframe');
+    ifr.src = 'https://www-ccv.adobe.io/v1/player/ccv/'+id+'/embed?bgcolor=%230a0a0b&autoplay=true&api_key=BehancePro2View';
+    ifr.allow = 'autoplay; fullscreen';
+    ifr.allowFullscreen = true;
+    ph.remove();
+    reel.appendChild(ifr);
+  }
+
+  // gallery filter
+  const grid = document.getElementById('grid');
+  document.querySelectorAll('.filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelector('.filter.active').classList.remove('active');
+      btn.classList.add('active');
+      const f = btn.dataset.f;
+      grid.querySelectorAll('.gitem').forEach(it => {
+        it.style.display = (f === 'all' || it.dataset.cat === f) ? '' : 'none';
+      });
+    });
+  });
+
+  // lightbox
+  const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg');
+  let imgs = [...document.querySelectorAll('.gitem img')], cur = 0;
+  document.querySelectorAll('.gitem').forEach((it, i) => it.addEventListener('click', () => { cur = i; open(); }));
+  function open(){ lbImg.src = imgs[cur].src; lbImg.alt = imgs[cur].alt; lb.classList.add('open'); }
+  function step(d){
+    const visible = imgs.filter(im => im.closest('.gitem').style.display !== 'none');
+    let idx = visible.indexOf(imgs[cur]);
+    idx = (idx + d + visible.length) % visible.length;
+    cur = imgs.indexOf(visible[idx]); open();
+  }
+  document.getElementById('lbClose').onclick = () => lb.classList.remove('open');
+  document.getElementById('lbNext').onclick = () => step(1);
+  document.getElementById('lbPrev').onclick = () => step(-1);
+  lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
+  addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') lb.classList.remove('open');
+    if (e.key === 'ArrowRight') step(1);
+    if (e.key === 'ArrowLeft') step(-1);
+  });
+</script>
+</body>
+</html>
